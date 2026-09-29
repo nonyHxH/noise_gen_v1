@@ -1,4 +1,7 @@
-
+<p align="center">
+  <img src="examples/noise_gray.jpg" width="45%">
+  <img src="examples/noise_rgb.jpg" width="45%">
+</p>
 # ppm rules
 
 file must start with magic number then in next line width and height then in next line max value(usually 255). then from next line onwards RGB values for each pixel, from top row to bottom and from left to right (top left corner).
