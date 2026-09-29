@@ -1,31 +1,35 @@
-<p align="center">
-  <img src="examples/noise_gray.jpg" width="35%">
-  &nbsp;&nbsp;&nbsp;
-  <img src="examples/noise_rgb.jpg" width="35%">
-</p>
-
-<p align="center">
-  <em>Grayscale noise</em>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <em>RGB noise</em>
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="examples/noise_gray.jpg" width="300">
+      <br>
+      <em>Grayscale noise</em>
+    </td>
+    <td align="center">
+      <img src="examples/noise_rgb.jpg" width="300">
+      <br>
+      <em>RGB noise</em>
+    </td>
+  </tr>
+</table>
 
 
 # ppm rules
 
-file must start with magic number then in next line width and height then in next line max value(usually 255). then from next line onwards RGB values for each pixel, from top row to bottom and from left to right (top left corner).
+file must start with magic number then in next line width and height then in next line max value(usually 255). then from next line onwards RGB values for each pixel, from top row to bottom and from left to right (top left corner to bottom right corner).
 
 eg:(p3 for decimal, p6 for binary)
 
+```text
 P3
 512 512
 255
-1 1 1 <!-- pixel (1,1) -->
-1 2 3 <!-- pixel (1,2) -->
-2 4 54 <!-- pixel (1,3) -->
+1 1 1 <- pixel (1,1)
+1 2 3 <- pixel (1,2)
+2 4 54 <- pixel (1,3)
 ....
-233 123 98 <!-- pixel (width,height) -->
-
+233 123 98 <- pixel (width,height)
+```
 # CPP Implementation:
 
 ### std::mt19937 rng(std::random_device{}()) 
